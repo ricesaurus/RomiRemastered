@@ -6,8 +6,15 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.commands.ExampleCommand;
-import frc.robot.sensor.RomiDrivetrain;
+import frc.robot.subsystems.RomiDrivetrain;
 import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.commands.DriveWithController;
+import frc.robot.commands.Forward;
+import frc.robot.commands.StraightLine_AButton;
+import frc.robot.commands.Turn90;
+import frc.robot.commands.Turn90_BButton;
+
+
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -55,6 +62,6 @@ public class RobotContainer {
   public Command getAutonomousCommand() {
     // An Exam(pleCommand will run in autonomous
     //return new Forward(m_romiDrivetrain,10).andThen(new Turn90(m_romiDrivetrain)).andThen(new Forward(m_romiDrivetrain,10)).andThen(new Turn90(m_romiDrivetrain)).andThen(new Forward(m_romiDrivetrain,10).andThen(new Turn90(m_romiDrivetrain)).andThen(new Forward(m_romiDrivetrain, 10)));
-    return m_controldrive;
+    return m_forward;
   }
 }
